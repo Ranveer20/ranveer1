@@ -1,38 +1,23 @@
 pipeline {
-  agent any
+  agent none
   stages {
-    stage('F5 Active Stage') {
+    stage('text1') {
       parallel {
-        stage('F5 Active Stage') {
+        stage('text1') {
           steps {
-            mail(subject: 'F5 is active', body: 'F5', from: 'jenkinsranveer', replyTo: 'pranveer@zeomega.com', to: 'pranveer@zeomega.com')
+            echo 'hello ranveer'
           }
         }
-        stage('F5 active') {
+        stage('text2') {
           steps {
-            echo 'No Mail'
+            echo 'hi ranveer'
           }
         }
       }
     }
-    stage('F5 Stage') {
-      parallel {
-        stage('F5 Stage') {
-          steps {
-            echo 'F5 Active'
-          }
-        }
-        stage('F5 stage') {
-          steps {
-            echo 'No F5'
-          }
-        }
-      }
-    }
-    stage('F5') {
+    stage('finish') {
       steps {
-        sh './shell.sh'
-        sh 'echo "Test" >12.txt'
+        echo 'bye!!!'
       }
     }
   }
