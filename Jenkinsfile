@@ -5,7 +5,7 @@ pipeline {
       parallel {
         stage('text1') {
           steps {
-            echo 'hello ranveer'
+            sh 'echo "Hello Script"'
           }
         }
         stage('text2') {
