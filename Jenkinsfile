@@ -10,7 +10,7 @@ pipeline {
         }
         stage('text2') {
           steps {
-            sh 'echo "Hello Script"'
+            echo 'My Message'
           }
         }
       }
